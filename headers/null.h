@@ -1,10 +1,7 @@
 #pragma once
-#include <iostream>
-#include <string>
 #include "./board.h"
-#include "./piece.h"
-using namespace std;
 
+class Board;
 class Null : public Piece {
 public:
 	Null(int i, int j, string st);

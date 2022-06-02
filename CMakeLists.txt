@@ -7,12 +7,15 @@ set(INCLUDE_DIRECTORY headers)
 
 # Add main.cpp file of project root directory as source file
 set(SOURCES
-    ${SRC_DIRECTORY}/P.cpp
-    ${SRC_DIRECTORY}/C.cpp
-    .
-    .
-    .
-    )
+    ${SRC_DIRECTORY}/bishop.cpp
+    ${SRC_DIRECTORY}/board.cpp
+    ${SRC_DIRECTORY}/king.cpp
+    ${SRC_DIRECTORY}/knight.cpp
+    ${SRC_DIRECTORY}/null.cpp
+    ${SRC_DIRECTORY}/pawn.cpp
+    ${SRC_DIRECTORY}/queen.cpp
+    ${SRC_DIRECTORY}/rook.cpp
+)
 
 # Add executable target with source files listed in SOURCE_FILES variable
 include_directories(${INCLUDE_DIRECTORY})

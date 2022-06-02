@@ -1,7 +1,4 @@
-#include <iostream>
-#include "../headers/piece.h"
 #include "../headers/bishop.h"
-using namespace std;
 
 Bishop::Bishop(int i, int j, char color, string st) {
     this->m_i = i;

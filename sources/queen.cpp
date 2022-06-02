@@ -1,7 +1,4 @@
-#include <iostream>
-#include "../headers/piece.h"
 #include "../headers/queen.h"
-using namespace std;
 
 Queen::Queen(int i, int j, char color, string st) {
     this->m_i = i;

@@ -1,7 +1,4 @@
-#include <iostream>
-#include "../headers/piece.h"
 #include "../headers/null.h"
-using namespace std;
 
 Null::Null(int i, int j, string st) {
     this->m_i = i;

@@ -1,8 +1,5 @@
-#include <iostream>
-#include <vector>
 #include "../headers/board.h"
 #include "../headers/null.h"
-using namespace std;
 
 Board::Board(){
 		for (int i = 0; i < 8; ++i) {
@@ -76,9 +73,9 @@ bool Board::check(Piece* k, vector<vector<Piece*>> v) {
 void Board::display() {
 		for (int i = 0; i < 8; ++i) {
 			for (int j = 0; j < 8; ++j) {
-				std::cout << *(this->board[i][j]) << " ";
+				cout << this->board[i][j]->state << " ";
 			}
-			std::cout << '\n';
+			cout << '\n';
 		}
 }
 

@@ -1,7 +1,4 @@
-#include <iostream>
-#include "../headers/piece.h"
 #include "../headers/king.h"
-using namespace std;
 
 King::King(int i, int j, char color, string st) {
 	this->m_i = i;

@@ -1,7 +1,4 @@
-#include <iostream>
-#include "../headers/piece.h"
 #include "../headers/rook.h"
-using namespace std;
 
 Rook::Rook(int i, int j, char color, string st) {
     this->m_i = i;

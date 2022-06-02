@@ -1,9 +1,5 @@
 #pragma once
-#include <iostream>
-#include <string>
 #include "./board.h"
-#include "./piece.h"
-using namespace std;
 
 class Bishop : public Piece {
 public:

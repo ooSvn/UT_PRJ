@@ -1,7 +1,4 @@
-#include <iostream>
-#include "../headers/piece.h"
 #include "../headers/knight.h"
-using namespace std;
 
 Knight::Knight(int i, int j, char color, string st) {
     this->m_i = i;

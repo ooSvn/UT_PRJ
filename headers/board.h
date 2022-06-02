@@ -1,7 +1,6 @@
 #pragma once
-#include <iostream>
-#include <vector>
 #include "./piece.h"
+#include "./null.h"
 
 class Board {
 public:
