@@ -13,7 +13,8 @@ public:
 	// int last_move[4] = { 0 };
 	Board();
 	bool if_do_move(Piece*, int, int); // makes a copy of the chess board & checks if the change is valid or not;
-	bool check(Piece*, std::vector<std::vector<Piece*>> v);
+	void do_move(Piece*, int, int);
+	bool check(Piece*, std::vector<std::vector<Piece*>>);
 	bool mate(Piece*);
 	void display();
 };

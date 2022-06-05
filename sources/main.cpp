@@ -68,3 +68,6 @@ int main(){
 	game.play();
     return 0;
 }
+
+// win messages should be generated(check_mate checking)
+// reset button with it's back process

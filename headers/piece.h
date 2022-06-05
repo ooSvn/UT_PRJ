@@ -21,4 +21,7 @@ public:
 		path += color; path += p; path += ".png";
 		return path;
 	}
+	void update_sp(){
+		this->sp.setPosition(sf::Vector2f(this->m_j*120 + 10, this->m_i*120 + 10));
+	}
 };

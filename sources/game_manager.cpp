@@ -33,18 +33,14 @@ void Manager::set_draw(){
             }
             else {
                 if (this->selected->m_i == i && this->selected->m_j == j){
-                    board->board[i][j]->rect.setFillColor(sf::Color(255, 255, 51));
+                    this->board->board[i][j]->rect.setFillColor(sf::Color(255, 255, 153));
                 }
                 else if (this->selected->validationCheck(i, j, *this->board))
                     if (this->board->if_do_move(this->selected, i, j)){
-                    // if (this->selected->piece_color == 'w'){
-                        // if (board->board[i][j]->piece_color != 'w')
-                            // board->board[i][j]->rect.setFillColor(sf::Color(0, 255, 128));
-                    // }
-                    // else if (this->selected->piece_color == 'b'){
-                        // if (board->board[i][j]->piece_color != 'b')
-                            board->board[i][j]->rect.setFillColor(sf::Color(0, 255, 128));
-                    // }
+                        if ((this->board->board[i][j]->piece_color == 'w' && this->selected->piece_color == 'b') ||
+                            (this->board->board[i][j]->piece_color == 'b' && this->selected->piece_color == 'w'))
+                            this->board->board[i][j]->rect.setFillColor(sf::Color(255, 153, 51));
+                        else this->board->board[i][j]->rect.setFillColor(sf::Color(0, 255, 128));
                 }
             }
             this->board->board[i][j]->rect.setPosition(sf::Vector2f(j*120, i*120));
@@ -55,14 +51,15 @@ void Manager::set_draw(){
 void Manager::draw(){
     for (int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; ++j){
-            board->board[i][j]->rect.setOutlineThickness(-1);
-            board->board[i][j]->rect.setOutlineColor(sf::Color::Red);
-            this->window->draw(board->board[i][j]->rect);
+            this->board->board[i][j]->rect.setOutlineThickness(-1);
+            this->board->board[i][j]->rect.setOutlineColor(sf::Color::Red);
+            this->window->draw(this->board->board[i][j]->rect);
         }
     }
     for (int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; ++j){
-            this->window->draw(board->board[i][j]->sp);
+            this->board->board[i][j]->update_sp();
+            this->window->draw(this->board->board[i][j]->sp);
         }
     }
 }
@@ -97,7 +94,7 @@ void Manager::mouse_handler(const sf::Vector2i& position){
     
     if (row == -1 || column == -1)
         return;
-    else if (this->board->board[row][column]->state != "--") {
+    else {
         select_Or_unselect_piece(row, column);
     }
 }
@@ -110,7 +107,23 @@ void Manager::select_Or_unselect_piece(int row, int column){
     }
     else if (this->selected->m_i == row && this->selected->m_j == column){
         this->selected = 0; // unselection
-    }    
+    }
+    else { // when some piece is selected and another cell is clicked in order to move that selected p
+        if (this->selected->validationCheck(row, column, *this->board) &&
+            this->board->if_do_move(this->selected, row, column)){
+            cout << "done!" << '\n';
+            move(row, column);
+            this->selected = 0;
+            if (this->turn == WHITE)
+                this->turn = BLACK;
+            else this->turn = WHITE;
+            this->board->display();
+            }
+    }
+}
+
+void Manager::move(int row, int column){
+    this->board->do_move(this->selected, row, column);
 }
 
 

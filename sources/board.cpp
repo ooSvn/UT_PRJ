@@ -29,12 +29,10 @@ bool Board::if_do_move(Piece* p, int dst_i, int dst_j) {
 				ans = true;
 			}
 			else {
-				cout << "here" << '\n';
 				ans = false;
 			}
 		}
 		else if (this->board[dst_i][dst_j]->piece_color == 'w') {
-			cout << "same col" << '\n';
 			ans = false;
 		}
 	}
@@ -103,14 +101,11 @@ bool Board::mate(Piece* k) {
 					for (int n = 0; n < 8; ++n) {
 						if (this->board[i][j]->validationCheck(m, n, *this)) {
 							if (this->board[m][n]->piece_color != this->board[i][j]->piece_color) {
-								//cout << *this->board[m][n] << " " << *this->board[i][j] << '\n';
 								Null* nll = new Null(i, j, "--");
 								Piece* org_item = this->board[m][n];
 								this->board[m][n] = this->board[i][j];
 								this->board[m][n]->m_i = m; this->board[m][n]->m_j = n;
 								this->board[i][j] = (Piece*)nll;
-								//this->display();
-								//cout << this->king_b->m_i << " " << this->king_b->m_j << '\n';
 								if (mate_plyr == 'w') {
 									if (!this->check(this->king_w, this->board)) {
 										this->board[i][j] = this->board[m][n];
@@ -124,15 +119,12 @@ bool Board::mate(Piece* k) {
 										this->board[i][j] = this->board[m][n];
 										this->board[m][n] = org_item;
 										this->board[i][j]->m_i = i;	this->board[i][j]->m_j = j;
-										//this->display();
-										//cout << "i: " << i << " j: " << j << " m: " << m << " n: " << n << '\n';
 										return false;
 									}
 								}
 								this->board[i][j] = this->board[m][n];
 								this->board[m][n] = org_item;
 								this->board[i][j]->m_i = i;	this->board[i][j]->m_j = j;
-								//cout << "after till" << '\n';
 							}
 						}
 					}
@@ -144,3 +136,9 @@ bool Board::mate(Piece* k) {
 	return true;
 }
 
+void Board::do_move(Piece* p, int dst_i, int dst_j){
+	Null* n = new Null(p->m_i, p->m_j, "--");
+	this->board[dst_i][dst_j] = p;
+	p->m_i = dst_i; p->m_j = dst_j;
+	this->board[n->m_i][n->m_j] = n;
+}
