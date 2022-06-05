@@ -35,15 +35,16 @@ void Manager::set_draw(){
                 if (this->selected->m_i == i && this->selected->m_j == j){
                     board->board[i][j]->rect.setFillColor(sf::Color(255, 255, 51));
                 }
-                else if (this->selected->validationCheck(i, j, *this->board)){
-                    if (this->selected->piece_color == 'w'){
-                        if (board->board[i][j]->piece_color != 'w')
+                else if (this->selected->validationCheck(i, j, *this->board))
+                    if (this->board->if_do_move(this->selected, i, j)){
+                    // if (this->selected->piece_color == 'w'){
+                        // if (board->board[i][j]->piece_color != 'w')
+                            // board->board[i][j]->rect.setFillColor(sf::Color(0, 255, 128));
+                    // }
+                    // else if (this->selected->piece_color == 'b'){
+                        // if (board->board[i][j]->piece_color != 'b')
                             board->board[i][j]->rect.setFillColor(sf::Color(0, 255, 128));
-                    }
-                    else if (this->selected->piece_color == 'w'){
-                        if (board->board[i][j]->piece_color != 'w')
-                            board->board[i][j]->rect.setFillColor(sf::Color(0, 255, 128));
-                    }
+                    // }
                 }
             }
             this->board->board[i][j]->rect.setPosition(sf::Vector2f(j*120, i*120));
@@ -54,6 +55,8 @@ void Manager::set_draw(){
 void Manager::draw(){
     for (int i = 0; i < 8; ++i){
         for (int j = 0; j < 8; ++j){
+            board->board[i][j]->rect.setOutlineThickness(-1);
+            board->board[i][j]->rect.setOutlineColor(sf::Color::Red);
             this->window->draw(board->board[i][j]->rect);
         }
     }

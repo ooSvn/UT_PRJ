@@ -11,40 +11,55 @@ Board::Board(){
 	}
 }
 
-bool Board::do_move(Piece* p, int dst_i, int dst_j) {
+bool Board::if_do_move(Piece* p, int dst_i, int dst_j) {
+	bool ans;
 	Piece* org_item = this->board[dst_i][dst_j];
 	int org_i = p->m_i, org_j = p->m_j;
 	
 	Null* n = new Null(p->m_i, p->m_j, "--");
-	this->board[dst_i][dst_j] = (Piece*)p;
-	p->m_i = dst_i; p->m_j = dst_j;
-	this->board[n->m_i][n->m_j] = (Piece*)n;
 
 	if (p->piece_color == 'w') {
 		if (this->board[dst_i][dst_j]->piece_color == 'b' || this->board[dst_i][dst_j]->piece_color == 'n') {
-			if (!this->check(this->king_w, this->board)) return true;
+			
+			this->board[dst_i][dst_j] = p;
+			p->m_i = dst_i; p->m_j = dst_j;
+			this->board[n->m_i][n->m_j] = n;
+
+			if (!this->check(this->king_w, this->board)) {
+				ans = true;
+			}
 			else {
-				this->board[dst_i][dst_j] = org_item;
-				this->board[org_i][org_j] = p;
-				p->m_i = org_i; p->m_j = org_j;
-				return false;
+				cout << "here" << '\n';
+				ans = false;
 			}
 		}
-		else if (this->board[dst_i][dst_j]->piece_color == 'w') return false;
+		else if (this->board[dst_i][dst_j]->piece_color == 'w') {
+			cout << "same col" << '\n';
+			ans = false;
+		}
 	}
 	else if (p->piece_color == 'b') {
 		if (this->board[dst_i][dst_j]->piece_color == 'w' || this->board[dst_i][dst_j]->piece_color == 'n') {
-			if (!this->check(this->king_b, this->board)) return true;
+			
+			this->board[dst_i][dst_j] = p;
+			p->m_i = dst_i; p->m_j = dst_j;
+			this->board[n->m_i][n->m_j] = n;
+			
+			if (!this->check(this->king_b, this->board)) {
+				ans = true;
+			}
 			else {
-				this->board[dst_i][dst_j] = org_item;
-				this->board[org_i][org_j] = p;
-				p->m_i = org_i; p->m_j = org_j;
-				return false;
+				ans = false;
 			}
 		}
-		else if (this->board[dst_i][dst_j]->piece_color == 'b') return false;
+		else if (this->board[dst_i][dst_j]->piece_color == 'b') {
+			ans = false;
+		}
 	}
-	return false;
+	this->board[dst_i][dst_j] = org_item;
+	this->board[org_i][org_j] = p;
+	p->m_i = org_i; p->m_j = org_j;
+	return ans;
 }
 
 bool Board::check(Piece* k, vector<vector<Piece*>> v) {
@@ -61,7 +76,6 @@ bool Board::check(Piece* k, vector<vector<Piece*>> v) {
 		for (int i = 0; i < 8; ++i) {
 			for (int j = 0; j < 8; ++j) {
 				if (v[i][j]->piece_color == 'w') {
-					//cout << v[i][j] << ": " << v[i][j]->validationCheck(k->m_i, k->m_j, *this) << '\n';
 					if (v[i][j]->validationCheck(k->m_i, k->m_j, *this)) return true;
 				}
 			}
