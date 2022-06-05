@@ -22,8 +22,13 @@ Pawn::Pawn(int i, int j, char color, string st) {
 
 bool Pawn::validationCheck(int dst_i, int dst_j, Board& chess) {
 	if (abs(dst_i - this->m_i) == 1 && abs(dst_j - this->m_j) == 0) {
-		if (dst_i > this->m_i) return true;
-		else return false;
+		if (this->piece_color == 'w')
+			if (dst_i < this->m_i) return true;
+			else return false;
+		else {
+			if (dst_i > this->m_i) return true;
+			else return false;
+		}
 	}
 	else if ((abs(dst_i - this->m_i) == 1 && abs(dst_j - this->m_j) == 1)) {
 		if (this->piece_color == 'w') {

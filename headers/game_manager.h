@@ -22,10 +22,12 @@ public:
     RES resume;
 	TURN turn;
     RenderWindow* window;
+    Piece* selected;
 	Manager(Board* b, RenderWindow* window); // fills the cells;
-	void play();
+	void set_draw();
+    void play();
     void out_put();
     void draw();
     void mouse_handler(const sf::Vector2i& position);
-    // int index_finder(int pxl);
+    void select_Or_unselect_piece(int row, int column);
 };
