@@ -177,6 +177,33 @@ sources/board.cpp.s:
 	$(MAKE) -f CMakeFiles/ap.dir/build.make CMakeFiles/ap.dir/sources/board.cpp.s
 .PHONY : sources/board.cpp.s
 
+sources/game_manager.o: sources/game_manager.cpp.o
+
+.PHONY : sources/game_manager.o
+
+# target to build an object file
+sources/game_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/ap.dir/build.make CMakeFiles/ap.dir/sources/game_manager.cpp.o
+.PHONY : sources/game_manager.cpp.o
+
+sources/game_manager.i: sources/game_manager.cpp.i
+
+.PHONY : sources/game_manager.i
+
+# target to preprocess a source file
+sources/game_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/ap.dir/build.make CMakeFiles/ap.dir/sources/game_manager.cpp.i
+.PHONY : sources/game_manager.cpp.i
+
+sources/game_manager.s: sources/game_manager.cpp.s
+
+.PHONY : sources/game_manager.s
+
+# target to generate assembly for a file
+sources/game_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/ap.dir/build.make CMakeFiles/ap.dir/sources/game_manager.cpp.s
+.PHONY : sources/game_manager.cpp.s
+
 sources/king.o: sources/king.cpp.o
 
 .PHONY : sources/king.o
@@ -381,6 +408,9 @@ help:
 	@echo "... sources/board.o"
 	@echo "... sources/board.i"
 	@echo "... sources/board.s"
+	@echo "... sources/game_manager.o"
+	@echo "... sources/game_manager.i"
+	@echo "... sources/game_manager.s"
 	@echo "... sources/king.o"
 	@echo "... sources/king.i"
 	@echo "... sources/king.s"

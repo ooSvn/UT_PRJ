@@ -16,6 +16,20 @@
 ./null.h
 /home/ali/Desktop/C++/git_folder/headers/null.h
 
+/home/ali/Desktop/C++/git_folder/headers/game_manager.h
+../headers/king.h
+/home/ali/Desktop/C++/git_folder/headers/king.h
+../headers/queen.h
+/home/ali/Desktop/C++/git_folder/headers/queen.h
+../headers/knight.h
+/home/ali/Desktop/C++/git_folder/headers/knight.h
+../headers/bishop.h
+/home/ali/Desktop/C++/git_folder/headers/bishop.h
+../headers/rook.h
+/home/ali/Desktop/C++/git_folder/headers/rook.h
+../headers/pawn.h
+/home/ali/Desktop/C++/git_folder/headers/pawn.h
+
 /home/ali/Desktop/C++/git_folder/headers/king.h
 ./board.h
 /home/ali/Desktop/C++/git_folder/headers/board.h
@@ -39,6 +53,8 @@ vector
 -
 string
 -
+SFML/Graphics.hpp
+-
 
 /home/ali/Desktop/C++/git_folder/headers/queen.h
 ./board.h
@@ -49,20 +65,6 @@ string
 /home/ali/Desktop/C++/git_folder/headers/board.h
 
 /home/ali/Desktop/C++/git_folder/sources/main.cpp
-../headers/king.h
-/home/ali/Desktop/C++/git_folder/headers/king.h
-../headers/queen.h
-/home/ali/Desktop/C++/git_folder/headers/queen.h
-../headers/knight.h
-/home/ali/Desktop/C++/git_folder/headers/knight.h
-../headers/bishop.h
-/home/ali/Desktop/C++/git_folder/headers/bishop.h
-../headers/rook.h
-/home/ali/Desktop/C++/git_folder/headers/rook.h
-../headers/pawn.h
-/home/ali/Desktop/C++/git_folder/headers/pawn.h
-
-/home/ali/Desktop/C++/git_folder/sources/pawn.cpp
-../headers/pawn.h
-/home/ali/Desktop/C++/git_folder/headers/pawn.h
+../headers/game_manager.h
+/home/ali/Desktop/C++/git_folder/headers/game_manager.h
 

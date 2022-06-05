@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ali/Desktop/C++/git_folder/sources/bishop.cpp" "/home/ali/Desktop/C++/git_folder/CMakeFiles/ap.dir/sources/bishop.cpp.o"
   "/home/ali/Desktop/C++/git_folder/sources/board.cpp" "/home/ali/Desktop/C++/git_folder/CMakeFiles/ap.dir/sources/board.cpp.o"
+  "/home/ali/Desktop/C++/git_folder/sources/game_manager.cpp" "/home/ali/Desktop/C++/git_folder/CMakeFiles/ap.dir/sources/game_manager.cpp.o"
   "/home/ali/Desktop/C++/git_folder/sources/king.cpp" "/home/ali/Desktop/C++/git_folder/CMakeFiles/ap.dir/sources/king.cpp.o"
   "/home/ali/Desktop/C++/git_folder/sources/knight.cpp" "/home/ali/Desktop/C++/git_folder/CMakeFiles/ap.dir/sources/knight.cpp.o"
   "/home/ali/Desktop/C++/git_folder/sources/main.cpp" "/home/ali/Desktop/C++/git_folder/CMakeFiles/ap.dir/sources/main.cpp.o"

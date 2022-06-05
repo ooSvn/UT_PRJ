@@ -12,6 +12,18 @@ CMakeFiles/ap.dir/sources/board.cpp.o: headers/null.h
 CMakeFiles/ap.dir/sources/board.cpp.o: headers/piece.h
 CMakeFiles/ap.dir/sources/board.cpp.o: sources/board.cpp
 
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/bishop.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/game_manager.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/knight.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/pawn.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/rook.h
+CMakeFiles/ap.dir/sources/game_manager.cpp.o: sources/game_manager.cpp
+
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/board.h
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/king.h
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/null.h
@@ -26,6 +38,7 @@ CMakeFiles/ap.dir/sources/knight.cpp.o: sources/knight.cpp
 
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/main.cpp.o: headers/game_manager.h
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/king.h
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/null.h

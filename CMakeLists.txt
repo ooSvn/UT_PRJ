@@ -15,6 +15,7 @@ set(SOURCES
     ${SRC_DIRECTORY}/pawn.cpp
     ${SRC_DIRECTORY}/queen.cpp
     ${SRC_DIRECTORY}/rook.cpp
+    ${SRC_DIRECTORY}/game_manager.cpp
 )
 
 # Add executable target with source files listed in SOURCE_FILES variable
@@ -22,3 +23,8 @@ include_directories(${INCLUDE_DIRECTORY})
 add_executable(${PROJECT_NAME}
     ${SRC_DIRECTORY}/main.cpp
     ${SOURCES})
+
+target_link_libraries(${PROJECT_NAME}
+    sfml-system
+    sfml-window
+    sfml-graphics)

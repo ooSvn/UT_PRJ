@@ -2,13 +2,13 @@
 #include "../headers/null.h"
 
 Board::Board(){
-		for (int i = 0; i < 8; ++i) {
-			vector <Piece*> row;
-			for (int j = 0; j < 8; ++j) {
-				row.push_back(0);
-			}
-			this->board.push_back(row);
+	for (int i = 0; i < 8; ++i) {
+		vector<Piece*> row;
+		for (int j = 0; j < 8; ++j){
+			row.push_back(0);
 		}
+		this->board.push_back(row);
+	}
 }
 
 bool Board::do_move(Piece* p, int dst_i, int dst_j) {

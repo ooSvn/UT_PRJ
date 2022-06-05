@@ -1,13 +1,7 @@
-#include "../headers/king.h"
-#include "../headers/queen.h"
-#include "../headers/knight.h"
-#include "../headers/bishop.h"
-#include "../headers/rook.h"
-#include "../headers/pawn.h"
+#include "../headers/game_manager.h"
 
 int main(){
     Board chess; string temp;
-    cin >> temp;
 	for (int i = 0; i < 8; ++i) {
 		for (int j = 0; j < 8; ++j) {
 			cin >> temp;
@@ -79,7 +73,8 @@ int main(){
 			}
 		}
 	}
-
-    chess.display();
+	RenderWindow window(VideoMode(1080, 960), "AMD CHESS", Style::Close | Style::Titlebar);
+	Manager game(&chess, &window);
+	game.play();
     return 0;
 }

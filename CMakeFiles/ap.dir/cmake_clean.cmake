@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ap.dir/sources/bishop.cpp.o"
   "CMakeFiles/ap.dir/sources/board.cpp.o"
+  "CMakeFiles/ap.dir/sources/game_manager.cpp.o"
   "CMakeFiles/ap.dir/sources/king.cpp.o"
   "CMakeFiles/ap.dir/sources/knight.cpp.o"
   "CMakeFiles/ap.dir/sources/main.cpp.o"

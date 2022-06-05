@@ -4,9 +4,9 @@
 
 class Board {
 public:
-	std::vector<std::vector<Piece*>> board;
-	std::vector <Piece*> player_w;
-	std::vector <Piece*> player_b;
+	vector<vector<Piece*>> board;
+	vector <Piece*> player_w;
+	vector <Piece*> player_b;
 	Piece* king_w;
 	Piece* king_b;
 	//vector <vector<int, Piece>> moves;
