@@ -11,9 +11,10 @@ enum TURN {
 	BLACK
 };
 
-enum RES {
-    YES,
-    NO
+enum Win {
+    bl,
+    wh,
+    nn
 };
 
 class Manager {
@@ -21,8 +22,7 @@ public:
     Board* board;
     Board* board_copy;
     Board sec_board;
-
-    RES resume;
+    Win who_wins;
 	TURN turn;
     RenderWindow* window;
     Piece* selected;

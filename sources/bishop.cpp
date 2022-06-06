@@ -14,7 +14,8 @@ Bishop::Bishop(int i, int j, char color, string st) {
 };
 
 bool Bishop::validationCheck(int dst_i, int dst_j, Board& chess) {
-    if (abs(dst_i - this->m_i) == abs(dst_j - this->m_j)) {
+    if ((abs(dst_i - this->m_i) == abs(dst_j - this->m_j)) &&
+        (dst_i != this->m_i) && (dst_j != this->m_j)) {
         int dir_i = (dst_i - this->m_i) / abs(dst_i - this->m_i);
         int dir_j = (dst_j - this->m_j) / abs(dst_j - this->m_j);
         int x = this->m_i + dir_i, y = this->m_j + dir_j;

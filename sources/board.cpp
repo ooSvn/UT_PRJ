@@ -93,20 +93,19 @@ void Board::display() {
 
 bool Board::mate(Piece* k) {
 	// k_colored pieces will make any possible move and it will checked if the king is still checked or not.
-	char mate_plyr = k->piece_color;
 	for (int i = 0; i < 8; ++i) {
 		for (int j = 0; j < 8; ++j) {
-			if (this->board[i][j]->piece_color == mate_plyr) {
+			if (this->board[i][j]->piece_color == k->piece_color) {
 				for (int m = 0; m < 8; ++m) {
 					for (int n = 0; n < 8; ++n) {
 						if (this->board[i][j]->validationCheck(m, n, *this)) {
 							if (this->board[m][n]->piece_color != this->board[i][j]->piece_color) {
 								Null* nll = new Null(i, j, "--");
 								Piece* org_item = this->board[m][n];
+								this->board[i][j]->m_i = m; this->board[i][j]->m_j = n;
 								this->board[m][n] = this->board[i][j];
-								this->board[m][n]->m_i = m; this->board[m][n]->m_j = n;
 								this->board[i][j] = (Piece*)nll;
-								if (mate_plyr == 'w') {
+								if (k->piece_color == 'w') {
 									if (!this->check(this->king_w, this->board)) {
 										this->board[i][j] = this->board[m][n];
 										this->board[m][n] = org_item;
@@ -132,7 +131,6 @@ bool Board::mate(Piece* k) {
 			}
 		}
 	}
-	std::cout << "here giving false" << '\n';
 	return true;
 }
 

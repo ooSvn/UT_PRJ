@@ -15,6 +15,7 @@ public:
 	int m_i, m_j;
 	string state;
 	RectangleShape rect;
+	Text win_msg;
 	virtual bool validationCheck(int dst_i, int dst_j, Board &) = 0;
 	string get_path(char color, char p){
 		string path = "images/";

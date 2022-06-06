@@ -1,7 +1,7 @@
 #include "../headers/game_manager.h"
 
 Manager::Manager(Board* b, Board* b_c, RenderWindow* window){
-    this->resume = YES;
+    this->who_wins = nn;
     this->turn = WHITE;
     this->board = b;
     this->board_copy = b_c;
@@ -71,6 +71,14 @@ void Manager::set_draw(){
     this->reset_rect.setOutlineColor(sf::Color(97, 124, 84));
     this->reset_rect.setPosition(sf::Vector2f(960, 420));
     update_turn_txt();
+    if (this->board->mate(this->board->king_b)) {
+        this->board->king_w->rect.setFillColor(sf::Color::Blue);
+        this->who_wins = bl;
+    }
+    else if (this->board->mate(this->board->king_w)) {
+        this->board->king_b->rect.setFillColor(sf::Color::Blue);
+        this->who_wins = wh;
+    }
 }
 
 void Manager::update_turn_txt(){
@@ -108,6 +116,22 @@ void Manager::draw(){
     this->window->draw(this->black_turn);
     this->window->draw(reset_rect);
     this->window->draw(reset_sp);
+    if (this->who_wins == wh){
+        this->board->king_w->win_msg.setFont(font);
+        this->board->king_w->win_msg.setCharacterSize(60);
+        this->board->king_w->win_msg.setStyle(sf::Text::Regular);
+        this->board->king_w->win_msg.setFillColor(sf::Color::Green);
+        this->board->king_w->win_msg.setPosition(360, 440);
+        this->window->draw(this->board->king_w->win_msg);
+    }
+    else if (this->who_wins == bl){
+        this->board->king_b->win_msg.setFont(font);
+        this->board->king_b->win_msg.setCharacterSize(60);
+        this->board->king_b->win_msg.setStyle(sf::Text::Regular);
+        this->board->king_b->win_msg.setFillColor(sf::Color::Green);
+        this->board->king_b->win_msg.setPosition(360, 440);
+        this->window->draw(this->board->king_b->win_msg);
+    }
 }
 
 void Manager::play(){
@@ -118,7 +142,7 @@ void Manager::play(){
             if (event.type == sf::Event::Closed) {
                 this->window->close();
             }
-            if (resume == YES && sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
                 mouse_handler(Mouse::getPosition(*(this->window)));
             }
         }
@@ -176,10 +200,10 @@ void Manager::move(int row, int column){
 }
 
 void Manager::reset_board(){
-    this->resume = YES;
     this->turn = WHITE;
     this->selected = 0;
     this->board = (this->make_board_copy());
+    this->who_wins = nn;
     set_draw();
 }
 
