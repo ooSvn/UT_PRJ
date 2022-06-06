@@ -20,6 +20,8 @@ class Manager {
 public:
     Board* board;
     Board* board_copy;
+    Board sec_board;
+
     RES resume;
 	TURN turn;
     RenderWindow* window;
@@ -40,4 +42,5 @@ public:
     void move(int, int);
     void update_turn_txt();
     void reset_board();
+    Board* make_board_copy();
 };

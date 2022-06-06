@@ -1,10 +1,17 @@
 #pragma once
 #include "./piece.h"
 #include "./null.h"
+#include "../headers/king.h"
+#include "../headers/queen.h"
+#include "../headers/knight.h"
+#include "../headers/bishop.h"
+#include "../headers/rook.h"
+#include "../headers/pawn.h"
 
 class Board {
 public:
 	vector<vector<Piece*>> board;
+
 	// vector <Piece*> player_w;
 	// vector <Piece*> player_b;
 	Piece* king_w;

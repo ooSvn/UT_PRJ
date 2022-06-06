@@ -4,13 +4,24 @@
 CMakeFiles/ap.dir/sources/bishop.cpp.o
  /home/ali/Desktop/C++/git_folder/headers/bishop.h
  /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
  /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
  /home/ali/Desktop/C++/git_folder/headers/piece.h
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/bishop.cpp
 CMakeFiles/ap.dir/sources/board.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
  /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
  /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
  /home/ali/Desktop/C++/git_folder/headers/piece.h
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/board.cpp
 CMakeFiles/ap.dir/sources/game_manager.cpp.o
  /home/ali/Desktop/C++/git_folder/headers/bishop.h
@@ -25,16 +36,26 @@ CMakeFiles/ap.dir/sources/game_manager.cpp.o
  /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/game_manager.cpp
 CMakeFiles/ap.dir/sources/king.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
  /home/ali/Desktop/C++/git_folder/headers/board.h
  /home/ali/Desktop/C++/git_folder/headers/king.h
- /home/ali/Desktop/C++/git_folder/headers/null.h
- /home/ali/Desktop/C++/git_folder/headers/piece.h
- /home/ali/Desktop/C++/git_folder/sources/king.cpp
-CMakeFiles/ap.dir/sources/knight.cpp.o
- /home/ali/Desktop/C++/git_folder/headers/board.h
  /home/ali/Desktop/C++/git_folder/headers/knight.h
  /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
  /home/ali/Desktop/C++/git_folder/headers/piece.h
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
+ /home/ali/Desktop/C++/git_folder/sources/king.cpp
+CMakeFiles/ap.dir/sources/knight.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
+ /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
+ /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
+ /home/ali/Desktop/C++/git_folder/headers/piece.h
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/knight.cpp
 CMakeFiles/ap.dir/sources/main.cpp.o
  /home/ali/Desktop/C++/git_folder/headers/bishop.h
@@ -49,25 +70,46 @@ CMakeFiles/ap.dir/sources/main.cpp.o
  /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/main.cpp
 CMakeFiles/ap.dir/sources/null.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
  /home/ali/Desktop/C++/git_folder/headers/board.h
- /home/ali/Desktop/C++/git_folder/headers/null.h
- /home/ali/Desktop/C++/git_folder/headers/piece.h
- /home/ali/Desktop/C++/git_folder/sources/null.cpp
-CMakeFiles/ap.dir/sources/pawn.cpp.o
- /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
  /home/ali/Desktop/C++/git_folder/headers/null.h
  /home/ali/Desktop/C++/git_folder/headers/pawn.h
  /home/ali/Desktop/C++/git_folder/headers/piece.h
- /home/ali/Desktop/C++/git_folder/sources/pawn.cpp
-CMakeFiles/ap.dir/sources/queen.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
+ /home/ali/Desktop/C++/git_folder/sources/null.cpp
+CMakeFiles/ap.dir/sources/pawn.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
  /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
  /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
  /home/ali/Desktop/C++/git_folder/headers/piece.h
  /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
+ /home/ali/Desktop/C++/git_folder/sources/pawn.cpp
+CMakeFiles/ap.dir/sources/queen.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
+ /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
+ /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
+ /home/ali/Desktop/C++/git_folder/headers/piece.h
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
+ /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/queen.cpp
 CMakeFiles/ap.dir/sources/rook.cpp.o
+ /home/ali/Desktop/C++/git_folder/headers/bishop.h
  /home/ali/Desktop/C++/git_folder/headers/board.h
+ /home/ali/Desktop/C++/git_folder/headers/king.h
+ /home/ali/Desktop/C++/git_folder/headers/knight.h
  /home/ali/Desktop/C++/git_folder/headers/null.h
+ /home/ali/Desktop/C++/git_folder/headers/pawn.h
  /home/ali/Desktop/C++/git_folder/headers/piece.h
+ /home/ali/Desktop/C++/git_folder/headers/queen.h
  /home/ali/Desktop/C++/git_folder/headers/rook.h
  /home/ali/Desktop/C++/git_folder/sources/rook.cpp

@@ -179,6 +179,70 @@ void Manager::reset_board(){
     this->resume = YES;
     this->turn = WHITE;
     this->selected = 0;
-    this->board = this->board_copy;
+    this->board = (this->make_board_copy());
     set_draw();
+}
+
+Board* Manager::make_board_copy(){
+	for (int i = 0; i < 8; ++i){
+		for (int j = 0;j < 8; ++j){
+			if (this->board_copy->board[i][j]->state == "--") {
+				Null* nll = new Null(i, j, "--");
+				sec_board.board[i][j] = (Piece*)nll;
+			}
+			// white Pieces;
+			else if (this->board_copy->board[i][j]->state == "KW") {
+				King* k_w = new King(i, j, 'w', "KW");
+				sec_board.board[i][j] = (Piece*)k_w;
+				sec_board.king_w = (Piece*)k_w;
+			}
+			else if (this->board_copy->board[i][j]->state == "QW") {
+				Queen* q_w = new Queen(i, j, 'w', "QW");
+				sec_board.board[i][j] = (Piece*)q_w;
+			}
+			else if (this->board_copy->board[i][j]->state == "BW") {
+				Bishop* b_w = new Bishop(i, j, 'w', "BW");
+				sec_board.board[i][j] = (Piece*)b_w;
+			}
+			else if (this->board_copy->board[i][j]->state == "NW") {
+				Knight* n_w = new Knight(i, j, 'w', "NW");
+				sec_board.board[i][j] = (Piece*)n_w;
+			}
+			else if (this->board_copy->board[i][j]->state == "RW") {
+				Rook* r_w = new Rook(i, j, 'w', "RW");
+				sec_board.board[i][j] = (Piece*)r_w;
+			}
+			else if (this->board_copy->board[i][j]->state == "PW") {
+				Pawn* p_w = new Pawn(i, j, 'w', "PW");
+				sec_board.board[i][j] = p_w;
+			}
+			// black Pieces;
+			else if (this->board_copy->board[i][j]->state == "KB") {
+				King* k_b = new King(i, j, 'b', "KB");
+				sec_board.board[i][j] = (Piece*)k_b;
+				sec_board.king_b = (Piece*)k_b;
+			}
+			else if (this->board_copy->board[i][j]->state == "QB") {
+				Queen* q_b = new Queen(i, j, 'b', "QB");
+				sec_board.board[i][j] = (Piece*)q_b;
+			}
+			else if (this->board_copy->board[i][j]->state == "BB") {
+				Bishop* b_b = new Bishop(i, j, 'b', "BB");
+				sec_board.board[i][j] = (Piece*)b_b;
+			}
+			else if (this->board_copy->board[i][j]->state == "NB") {
+				Knight* n_b = new Knight(i, j, 'b', "NB");
+				sec_board.board[i][j] = (Piece*)n_b;
+			}
+			else if (this->board_copy->board[i][j]->state == "RB") {
+				Rook* r_b = new Rook(i, j, 'b', "RB");
+				sec_board.board[i][j] = (Piece*)r_b;
+			}
+			else if (this->board_copy->board[i][j]->state == "PB") {
+				Pawn* p_b = new Pawn(i, j, 'b', "PB");
+				sec_board.board[i][j] = (Piece*)p_b;
+			}
+		}
+	}
+	return &sec_board;
 }

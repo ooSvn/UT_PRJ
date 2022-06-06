@@ -3,13 +3,24 @@
 
 CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/bishop.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/bishop.cpp.o: sources/bishop.cpp
 
+CMakeFiles/ap.dir/sources/board.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/board.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/board.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/board.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/board.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/board.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/board.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/board.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/board.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/board.cpp.o: sources/board.cpp
 
 CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/bishop.h
@@ -24,16 +35,26 @@ CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/queen.h
 CMakeFiles/ap.dir/sources/game_manager.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/game_manager.cpp.o: sources/game_manager.cpp
 
+CMakeFiles/ap.dir/sources/king.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/board.h
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/king.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/king.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/king.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/king.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/king.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/king.cpp.o: sources/king.cpp
 
+CMakeFiles/ap.dir/sources/knight.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/knight.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/knight.cpp.o: headers/king.h
 CMakeFiles/ap.dir/sources/knight.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/knight.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/knight.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/knight.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/knight.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/knight.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/knight.cpp.o: sources/knight.cpp
 
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/bishop.h
@@ -48,26 +69,47 @@ CMakeFiles/ap.dir/sources/main.cpp.o: headers/queen.h
 CMakeFiles/ap.dir/sources/main.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/main.cpp.o: sources/main.cpp
 
+CMakeFiles/ap.dir/sources/null.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/null.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/null.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/null.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/null.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/null.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/null.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/null.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/null.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/null.cpp.o: sources/null.cpp
 
+CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/null.h
 CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/pawn.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/pawn.cpp.o: sources/pawn.cpp
 
+CMakeFiles/ap.dir/sources/queen.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/queen.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/queen.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/queen.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/queen.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/queen.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/queen.cpp.o: headers/piece.h
 CMakeFiles/ap.dir/sources/queen.cpp.o: headers/queen.h
+CMakeFiles/ap.dir/sources/queen.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/queen.cpp.o: sources/queen.cpp
 
+CMakeFiles/ap.dir/sources/rook.cpp.o: headers/bishop.h
 CMakeFiles/ap.dir/sources/rook.cpp.o: headers/board.h
+CMakeFiles/ap.dir/sources/rook.cpp.o: headers/king.h
+CMakeFiles/ap.dir/sources/rook.cpp.o: headers/knight.h
 CMakeFiles/ap.dir/sources/rook.cpp.o: headers/null.h
+CMakeFiles/ap.dir/sources/rook.cpp.o: headers/pawn.h
 CMakeFiles/ap.dir/sources/rook.cpp.o: headers/piece.h
+CMakeFiles/ap.dir/sources/rook.cpp.o: headers/queen.h
 CMakeFiles/ap.dir/sources/rook.cpp.o: headers/rook.h
 CMakeFiles/ap.dir/sources/rook.cpp.o: sources/rook.cpp
 
