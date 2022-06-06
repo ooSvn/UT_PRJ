@@ -3,7 +3,6 @@
 Bishop::Bishop(int i, int j, char color, string st) {
 	this->tx.loadFromFile(get_path(color, 'b'));
     this->tx.setSmooth(true);
-    // cout << this->tx.getSize().x << '\n';
     this->sp.setTexture(this->tx);
     this->sp.setPosition(sf::Vector2f(j*120 + 10, i*120 + 10));
     this->sp.setScale(sf::Vector2f((float)100 / (float)this->tx.getSize().x, (float)100 / this->tx.getSize().y));
