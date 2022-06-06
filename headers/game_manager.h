@@ -23,6 +23,10 @@ public:
 	TURN turn;
     RenderWindow* window;
     Piece* selected;
+    Sprite reset_sp;
+    Texture reset_txt;
+    Text white_turn, black_turn;
+    Font font;
 	Manager(Board*, RenderWindow*); // fills the cells;
 	void set_draw();
     void play();
@@ -31,4 +35,6 @@ public:
     void mouse_handler(const sf::Vector2i&);
     void select_Or_unselect_piece(int, int);
     void move(int, int);
+    void update_turn_txt();
+
 };

@@ -70,4 +70,14 @@ int main(){
 }
 
 // win messages should be generated(check_mate checking)
+// turn expressing
 // reset button with it's back process
+
+// RB NB BB QB KB BB NB RB
+// PB PB PB PB PB PB PB PB
+// -- -- -- -- -- -- -- --
+// -- -- -- -- -- -- -- --
+// -- -- -- -- -- -- -- --
+// -- -- -- -- -- -- -- --
+// PW PW PW PW PW PW PW PW
+// RW NW BW QW KW BW NW RW

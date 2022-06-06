@@ -6,7 +6,6 @@ Queen::Queen(int i, int j, char color, string st) {
     this->sp.setTexture(this->tx);
     this->sp.setPosition(sf::Vector2f(j*120 + 10, i*120 + 10));
     this->sp.setScale(sf::Vector2f((float)100 / (float)this->tx.getSize().x, (float)100 / this->tx.getSize().y));
-
     this->m_i = i;
     this->m_j = j;
     this->piece_color = color;
