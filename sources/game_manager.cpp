@@ -73,11 +73,11 @@ void Manager::set_draw(){
     update_turn_txt();
     if (this->board->mate(this->board->king_b)) {
         this->board->king_w->rect.setFillColor(sf::Color::Blue);
-        this->who_wins = bl;
+        this->who_wins = wh;
     }
     else if (this->board->mate(this->board->king_w)) {
         this->board->king_b->rect.setFillColor(sf::Color::Blue);
-        this->who_wins = wh;
+        this->who_wins = bl;
     }
 }
 
@@ -120,7 +120,7 @@ void Manager::draw(){
         this->board->king_w->win_msg.setFont(font);
         this->board->king_w->win_msg.setCharacterSize(60);
         this->board->king_w->win_msg.setStyle(sf::Text::Regular);
-        this->board->king_w->win_msg.setFillColor(sf::Color::Green);
+        this->board->king_w->win_msg.setFillColor(sf::Color(199, 21, 133));
         this->board->king_w->win_msg.setPosition(360, 440);
         this->window->draw(this->board->king_w->win_msg);
     }
@@ -128,7 +128,7 @@ void Manager::draw(){
         this->board->king_b->win_msg.setFont(font);
         this->board->king_b->win_msg.setCharacterSize(60);
         this->board->king_b->win_msg.setStyle(sf::Text::Regular);
-        this->board->king_b->win_msg.setFillColor(sf::Color::Green);
+        this->board->king_b->win_msg.setFillColor(sf::Color(199, 21, 133));
         this->board->king_b->win_msg.setPosition(360, 440);
         this->window->draw(this->board->king_b->win_msg);
     }
