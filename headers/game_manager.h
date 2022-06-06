@@ -19,15 +19,18 @@ enum RES {
 class Manager {
 public:
     Board* board;
+    Board* board_copy;
     RES resume;
 	TURN turn;
     RenderWindow* window;
     Piece* selected;
+    RectangleShape menu;
+    RectangleShape reset_rect;
     Sprite reset_sp;
     Texture reset_txt;
     Text white_turn, black_turn;
     Font font;
-	Manager(Board*, RenderWindow*); // fills the cells;
+	Manager(Board*, Board*, RenderWindow*); // fills the cells;
 	void set_draw();
     void play();
     void out_put();
@@ -36,5 +39,5 @@ public:
     void select_Or_unselect_piece(int, int);
     void move(int, int);
     void update_turn_txt();
-
+    void reset_board();
 };
